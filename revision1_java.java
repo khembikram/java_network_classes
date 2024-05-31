@@ -1,3 +1,4 @@
+//  Ask number from user and find even or odd
 import java.util.Scanner;
 
 /**

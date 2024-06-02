@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Student {
+class Student {
     public String name;
     public int age;
     public double[] marks = new double[5];

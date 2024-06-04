@@ -9,7 +9,10 @@ public class AddressType {
         try {
             InetAddress address  = InetAddress.getByName(test_address);
             if (address.isLoopbackAddress()) {
-                System.err.println("Is Loop Back Address");
+                System.err.println(test_address + "Is Loop Back Address");
+            }
+            if(address.isAnyLocalAddress()) {
+                System.err.println(test_address + "Is wild Card Address");
             }
         } catch (UnknownHostException e) {
             System.out.println(e.getMessage());

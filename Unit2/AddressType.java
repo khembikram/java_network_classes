@@ -12,8 +12,17 @@ public class AddressType {
             if(address.isAnyLocalAddress()) {
                 System.err.println(test_address + "Is wild Card Address");
             }
+            if(address.isMulticastAddress()){
+                System.err.println(test_address + "Is a multi-cast Address");
+            }
         } catch (UnknownHostException e) {
             System.out.println(e.getMessage());
         }
     }
 }
+
+
+
+// Loop Back Address :- AddressType 127.0.0.1
+// Wild Card Address :- AddressType 0.0.0.0
+// Wild Card Address :- AddressType 224.0.0.0

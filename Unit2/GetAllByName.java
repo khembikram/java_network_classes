@@ -1,5 +1,3 @@
-package Unit2;
-
 import java.net.*;
 
 public class GetAllByName {

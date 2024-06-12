@@ -27,7 +27,7 @@ public class ProtocolTester {
             "file:///C:/Users/sujan/OneDrive/Pictures/Screenshots/Screenshot%202024-06-09%20224649.png"
         };
         for (String url : urls) {
-            System.out.println(url);
+            tester(url);
         }
     }
 }

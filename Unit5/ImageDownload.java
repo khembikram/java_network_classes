@@ -5,16 +5,14 @@ public class ImageDownload {
 
     public static void downloadImage(URL url) {
         try {
-            URLConnection conn = url.openConnection(); // Open the URL connection
-            conn.connect(); // Important to explicitly connect
+            URLConnection conn = url.openConnection(); 
+            conn.connect(); 
 
-            // Check if content is available
             if (conn.getContentLength() == -1) {
                 throw new IOException("Content not found");
             } else {
                 System.out.println("Content Length: " + conn.getContentLength());
 
-                // Download the image using InputStream and save it to a file
                 try (InputStream in = conn.getInputStream();
                      FileOutputStream out = new FileOutputStream("downloaded_image.webp")) {
                     byte[] buffer = new byte[4096];
@@ -37,9 +35,7 @@ public class ImageDownload {
             downloadImage(url);
         } catch (MalformedURLException e) {
             System.out.println("Malformed URL: " + e.getMessage());
-        } catch (IOException e) {
-            System.out.println("IO Exception: " + e.getMessage());
-        } catch (URISyntaxException e) {
+        }catch (URISyntaxException e) {
             System.out.println("URI Syntax Exception: " + e.getMessage());
         }
     }

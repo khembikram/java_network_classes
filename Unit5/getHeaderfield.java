@@ -4,7 +4,7 @@ import java.net.*;
 public class getHeaderfield {
     public static void main(String[] args) {
         try {
-            URI uri = new URI("https://annapurnapost.com");
+            URI uri = new URI("https://www.geeksforgeeks.org/");
             URL url = uri.toURL();
             URLConnection conn = url.openConnection();
             System.out.println("Content-ecoding" + conn.getHeaderField("content-encoding"));
@@ -12,7 +12,7 @@ public class getHeaderfield {
             System.out.println("Content-Type" + conn.getHeaderField("content-type"));
             System.out.println("Expires: " + conn.getHeaderField("expires"));
             System.out.println("Date: " + conn.getHeaderField("date"));
-            
+            System.out.println();
             
         } catch (MalformedURLException e) {
             System.out.println(e.getMessage());

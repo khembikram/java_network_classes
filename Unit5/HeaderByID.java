@@ -17,7 +17,6 @@ public class HeaderByID {
                     break; 
                 System.out.println(conn.getHeaderFieldKey(i) + " : " + header);
                 i = i + 1;
-                
             }
 
         } catch (MalformedURLException e) {

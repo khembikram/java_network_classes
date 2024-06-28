@@ -9,10 +9,18 @@ public class UserInteraction {
             URI uri = new URI("https://en.wikipedia.org/wiki/Nepal");
             URL url = uri.toURL();
             URLConnection conn = url.openConnection();
-            if (conn.getAllowUserInteraction()){
+            if (conn.getAllowUserInteraction()) {
                 System.out.println("User Interaction is allowed");
             } else {
                 System.out.println("User interaction is not allowed");
+                conn.setAllowUserInteraction(true);
+            }
+
+            if (conn.getAllowUserInteraction()) {
+                System.out.println("User Interaction is allowed");
+            } else {
+                System.out.println("User interaction is not allowed");
+                conn.setAllowUserInteraction(true);
             }
         } catch (URISyntaxException e) {
             System.out.println(e.getMessage());

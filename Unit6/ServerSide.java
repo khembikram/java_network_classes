@@ -1,0 +1,14 @@
+import java.io.*;
+import java.net.*;
+
+public class ServerSide {
+    public static void main(String[] args) {
+        try {
+            ServerSocket ss = new ServerSocket(6666);
+            ss.accept();
+            System.out.println("Connection Established");
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}

@@ -21,6 +21,8 @@ public class RwServer {
 
                 s2 = reader.readLine();
                 dout.writeUTF(s2);
+                dout.flush();
+                // dout.close();
             }
 
             // din close

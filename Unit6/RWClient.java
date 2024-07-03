@@ -1,4 +1,4 @@
-public class TwoWayServer {
+public class RWClient {
     public static void main(String[] args) {
         
     }

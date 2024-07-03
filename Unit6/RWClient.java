@@ -19,6 +19,7 @@ public class RWClient {
                 s1 = din.readUTF();
                 System.out.println("Server says: " + s1);
             }
+            dout.close();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

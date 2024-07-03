@@ -16,6 +16,7 @@ public class RwServer {
 
             String s1="" ,s2="";
             while(!s1.equals("q")){
+                System.out.print("Enter message for Client: ");
                 s1 = din.readUTF();
                 System.out.println("Client says: " + (String) s1 );
 

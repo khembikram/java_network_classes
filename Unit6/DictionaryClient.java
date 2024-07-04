@@ -15,7 +15,8 @@ public class DictionaryClient {
             OutputStream out = socket.getOutputStream();
             Writer writer = new OutputStreamWriter(out, "UTF-8");
             writer = new BufferedWriter(writer);
-            writer.write("DEFINE eng-lat gold\r\n");
+            // writer.write("DEFINE eng-lat gold\r\n");
+            writer.write("Show DB \r\n");
             writer.flush();
             
             InputStream in = socket.getInputStream();

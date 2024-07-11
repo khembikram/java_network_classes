@@ -14,6 +14,7 @@ public class AddressType {
             }
             if(address.isMulticastAddress()){
                 System.err.println(test_address + "Is a multi-cast Address");
+                
             }
         } catch (UnknownHostException e) {
             System.out.println(e.getMessage());

@@ -25,7 +25,7 @@ public class ServerLog {
             connection.close();
             server.close();
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            errorLogger.log(Level.SEVERE, e.getMessage());
         }
     }
 }

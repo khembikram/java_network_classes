@@ -16,6 +16,19 @@ public class httpsClient {
             for (String string : Suites) {
                 System.out.println(string);
             }
+            System.out.println("Supported Cipher Suites");
+            String[] supportedSuites = socket.getSupportedCipherSuites();
+            for (String suite : supportedSuites) {
+                System.out.println(suite);
+            }
+
+            socket.setEnabledCipherSuites(supportedSuites);
+            InputStream reader = socket.getInputStream();
+            int ch;
+            while ((ch = reader.read()) != -1) {
+                System.out.println((char) ch);
+            }
+            System.out.println();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

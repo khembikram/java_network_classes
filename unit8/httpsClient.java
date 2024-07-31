@@ -23,12 +23,13 @@ public class httpsClient {
             }
 
             socket.setEnabledCipherSuites(supportedSuites);
-            InputStream reader = socket.getInputStream();
-            int ch;
-            while ((ch = reader.read()) != -1) {
-                System.out.println((char) ch);
-            }
-            System.out.println();
+            BufferedReader in = new BufferedReader(
+                new InputStreamReader(socket.getInputStream());
+                
+                String s;
+                while (!(s = in.readLine()).equals("")) {
+                    System.out.println(s);
+                }
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

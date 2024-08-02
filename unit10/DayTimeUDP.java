@@ -19,8 +19,8 @@ public class DayTimeUDP {
             socket.setSoTimeout(10000);
 
             // Create a DatagramPacket to send the request
-            InetAddress host = InetAddress.getByName("time.nist.gov");
-            DatagramPacket request = new DatagramPacket(new byte[1], 1, host, 37);
+            InetAddress host = InetAddress.getByName("localhost");
+            DatagramPacket request = new DatagramPacket(new byte[1], 1, host, 13);
 
             // Create a DatagramPacket to receive the response
             DatagramPacket response = new DatagramPacket(new byte[4], 4); // Time protocol uses 4 bytes for response
